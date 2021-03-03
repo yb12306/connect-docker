@@ -9,6 +9,7 @@ RUN apt-get clean && apt-get update && apt-get install -y --no-install-recommend
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
+ENV TZ=Asia/Shanghai
 
 RUN curl -SL 'https://s3.amazonaws.com/downloads.mirthcorp.com/connect/3.10.1.b280/mirthconnect-3.10.1.b280-unix.tar.gz' \
     | tar -xzC /opt \
