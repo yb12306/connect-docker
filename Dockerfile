@@ -9,8 +9,8 @@ RUN apt-get clean && apt-get update && apt-get install -y --no-install-recommend
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
-ENV TZ=Asia/Shanghai
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+ENV TZ Asia/Shanghai
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 RUN curl -SL 'https://s3.amazonaws.com/downloads.mirthcorp.com/connect/3.10.1.b280/mirthconnect-3.10.1.b280-unix.tar.gz' \
     | tar -xzC /opt \
